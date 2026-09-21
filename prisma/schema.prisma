@@ -29,7 +29,7 @@ model Task {
   taskId  String  @id  @default(uuid())
   userId  String
   user  User  @relation(fields: [userId], references: [userId])
-  statusTask  Status
+  statusTask  Status  @default(TODO)
   nameTask  String 
   descriptionTask  String
 }
